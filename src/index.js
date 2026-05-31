@@ -4,12 +4,31 @@ import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import User from "./components/User/User";
+import Admin from "./components/Admin/Admin";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/users",
+    element: <User />,
+  },
+  {
+    path: "/admins",
+    element: <Admin />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <RouterProvider router={router} />,
+
+  // </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
