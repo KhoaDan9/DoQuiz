@@ -1,34 +1,12 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
-import "./styles/global.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import User from "./components/User/User";
-import Admin from "./components/Admin/Admin";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/users",
-        element: <User />,
-      },
-      {
-        path: "/admins",
-        element: <Admin />,
-      },
-    ],
-  },
-]);
+import Layout from "./views/Layout";
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <RouterProvider router={router} />,
+  <Layout />,
 
   // </React.StrictMode>,
 );
