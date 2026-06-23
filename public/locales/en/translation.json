@@ -1,0 +1,125 @@
+{
+    "homepage": {
+        "title": "The form is only the beginning",
+        "body": "Collect, analyze, and act on customer data with the complete platform for AI forms & workflows.",
+        "login": "Get started—it's free",
+        "do-quiz": "Do quiz now!"
+    },
+    "header": {
+        "home": "Home",
+        "quizzes": "Quizzes",
+        "admin": "Admin",
+        "login": "Login",
+        "register": "Sign up",
+        "profile": "Profile",
+        "logout": "Logout",
+        "setting": "Setting"
+    },
+
+    "admin": {
+        "profile": "Profile",
+        "logout": "Logout"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "c-left-1": "Total User",
+        "c-left-2": "Total Quizzes",
+        "c-left-3": "Total Questions",
+        "c-left-4": "Total Answers"
+    },
+    "sidebar": {
+        "head-1": "Dashboard",
+        "head-2": "Components",
+        "item-21": "User Management",
+        "item-22": "Quiz Management",
+        "item-23": "Question Management"
+    },
+
+    "user-mng": {
+        "title": "User Management",
+        "btn-add": "Add new user",
+
+        "table":{
+            "username": "Username",
+            "image": "Image",
+            "email": "Email",
+            "role": "Role",
+            "action": "Action",
+            "no-img": "No Image",
+            "view": "View",
+            "update": "Update",
+            "delete": "Delete",
+            "prev": "< Prev",
+            "next": "Next >"
+        }
+    },
+
+    "quiz-mng": {
+        "title": "Quiz Management",
+        "btn-add": "Add new Quiz",
+
+        "update-title": "Update Quiz",
+        "easy": "EASY",
+        "medium": "MEDIUM",
+        "hard": "HARD",
+
+        "delete-title": "Confirm Delete the Quiz",
+        "delete-body": "Are you sure to delete this quiz",
+        "delete-close": "Close",
+        "delete-yes": "Yes",
+
+
+        "add":{
+            "name": "Name",
+            "description": "Description",
+            "type": "Quiz type...",
+            "upload-img": "Upload Image",
+            "preview-img": "Preview Image",
+            "close": "Close",
+            "save": "Save"
+        },
+       
+        "assign": {
+            "title": "Assign Quiz",
+            "quiz": "Select Quiz",
+            "user": "Select User",
+            "btn": "Assign"
+        },
+
+        "table":{
+            "name": "Name",
+            "description": "Description",
+            "type": "Type",
+            "image": "Image",
+            "action": "Action",
+            "update": "Update",
+            "delete": "Delete"
+        }
+    },
+
+    "question-mng": {
+        "title": "Question Management",
+        "select-q": "Question Management",
+        "btn-add": "Add new Question",
+        "question": "Question",
+        "answer": "Answer",
+        "no-img": "No Image is uploaded",
+        "save": "Save"
+    },
+
+    "user": {
+        "quiz-not-found": "You don't have quiz yet",
+        "btn-start": "Start now",
+        "prev": "Prev",
+        "next": "Next",
+        "finish": "Finish",
+
+        "modal": {
+            "title":"Your Result...",
+            "total-questions": "Total Questions:",
+            "total-correct-ans": "Total Correct Answers:",
+            "btn-show": "Show Answers",
+            "btn-close": "Close"
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "homepage": {
+        "title": "Bước khởi đầu",
+        "body": "Thu thập, phân tích và hành động dựa trên dữ liệu khách hàng với nền tảng hoàn chỉnh dành cho các biểu mẫu và quy trình làm việc AI.",
+        "login": "Thử ngay, hoàn toàn miễn phí",
+        "do-quiz": "Làm quiz ngay!"
+    },
+    "header": {
+        "home": "Trang chủ",
+        "quizzes": "Quizzes",
+        "admin": "Quản trị viên",
+        "login": "Đăng nhập",
+        "register": "Đăng kí",
+        "profile": "Tài khoản",
+        "logout": "Đăng xuất",
+        "setting": "Cài đặt"
+    },
+    "admin": {
+        "profile": "Tài khoản",
+        "logout": "Đăng xuất"
+    },
+    "dashboard": {
+        "title": "Bảng điều khiển",
+        "c-left-1": "Tổng người dùng",
+        "c-left-2": "Tổng bài Quiz",
+        "c-left-3": "Tổng câu hỏi",
+        "c-left-4": "Tổng câu trả lời"
+    },
+    "sidebar": {
+        "head-1": "Bảng điều khiển",
+        "head-2": "Trang thành phần",
+        "item-21": "Quản lý người dùng",
+        "item-22": "Quản lý bài quiz",
+        "item-23": "Quản lý câu hỏi"
+    },
+
+    "user-mng": {
+        "title": "Trang thành phần",
+        "btn-add": "Thêm người dùng",
+
+        "table":{
+            "username": "Username",
+            "image": "Hình ảnh",
+            "email": "Email",
+            "role": "Chức năng",
+            "action": "Hành động",
+            "no-img": "Không có hình ảnh",
+            "view": "Xem",
+            "update": "Sửa",
+            "delete": "Xóa",
+            "prev": "< Trước",
+            "next": "Tiếp >"
+        }
+    },
+
+    "quiz-mng": {
+        "title": "Quản lý bài quiz",
+        "btn-add": "Thêm bài quiz",
+
+        "update-title": "Sửa bài quiz",
+        "easy": "Dễ",
+        "medium": "Thường",
+        "hard": "Khó",
+
+        "delete-title": "Xác nhận xóa Quiz",
+        "delete-body": "Bạn có muốn xóa Quiz không",
+        "delete-close": "Hủy",
+        "delete-yes": "Có",
+
+
+
+        "add":{
+            "name": "Tên",
+            "description": "Nội dung",
+            "type": "Độ khó",
+            "upload-img": "Sửa hình ảnh",
+            "preview-img": "Ảnh xem trước",
+            "close": "Đóng",
+            "save": "Lưu"
+        },
+       
+        "assign": {
+            "title": "Đăng kí Quiz",
+            "quiz": "Chọn bài Quiz",
+            "user": "Chọn người dùng",
+            "btn": "Xác nhận"
+        },
+
+        "table":{
+            "name": "Tên",
+            "description": "Nội dung",
+            "type": "Độ khó",
+            "image": "Hình ảnh",
+            "action": "Hành động",
+            "update": "Sửa",
+            "delete": "Xóa"
+        }
+    },
+
+    "question-mng": {
+        "title": "Quản lý câu hỏi",
+        "select-q": "Quản lý câu hỏi",
+        "btn-add": "Thêm câu hỏi",
+        "question": "Câu hỏi",
+        "answer": "Câu trả lời",
+        "no-img": "Không có hình ảnh",
+        "save": "Lưu"
+    },
+
+    "user": {
+        "quiz-not-found": "Hiện tại bạn chưa được cho phép truy cập 1 quiz nào cả",
+        "btn-start": "Bắt đầu",
+        "prev": "Trước",
+        "next": "Tiếp",
+        "finish": "Nộp",
+
+        "modal": {
+            "title":"Kết quả...",
+            "total-questions": "Tổng số câu hỏi:",
+            "total-correct-ans": "Tổng số câu trả lời đúng:",
+            "btn-show": "Hiển thị kết quả",
+            "btn-close": "Đóng"
+        }
+    }
+}

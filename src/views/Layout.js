@@ -1,19 +1,24 @@
 import { ToastContainer } from "react-toastify";
-import React from "react";
+import { Suspense } from "react";
 
-import User from "../components/User/User";
 import App from "../views/App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Admin from "../components/Admin/Admin";
 import HomePage from "../components/Home/HomePage";
 import ManageUser from "../components/Admin/Content/ManageUser";
+import ManageQuiz from "../components/Admin/Content/Quiz/ManageQuiz";
 import Dashboard from "../components/Admin/Content/Dashboard";
 import Login from "../components/Auth/Login";
-import Signup from "../components/Auth/Signup";
+import Register from "../components/Auth/Register";
 
 import "../styles/global.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ListQuiz from "../components/User/ListQuiz";
+import DetailQuiz from "../components/User/DetailQuiz";
+import Questions from "../components/Admin/Content/Question/Questions";
+import PrivateRoute from "../routes/PrivateRoute";
+import Profile from "../components/User/Profile";
 
 const Layout = () => {
   const router = createBrowserRouter([
@@ -26,14 +31,38 @@ const Layout = () => {
           element: <HomePage />,
         },
         {
-          path: "/users",
-          element: <User />,
+          path: "/quizzes",
+          element: (
+            <PrivateRoute>
+              <ListQuiz />
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/quizzes/:id",
+          element: (
+            <PrivateRoute>
+              <DetailQuiz />
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/profile",
+          element: (
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          ),
         },
       ],
     },
     {
       path: "/admins",
-      element: <Admin />,
+      element: (
+        <PrivateRoute>
+          <Admin />
+        </PrivateRoute>
+      ),
       children: [
         {
           index: true,
@@ -43,21 +72,30 @@ const Layout = () => {
           path: "manage-users",
           element: <ManageUser />,
         },
+        {
+          path: "manage-quizzes",
+          element: <ManageQuiz />,
+        },
+        {
+          path: "manage-questions",
+          element: <Questions />,
+        },
       ],
     },
+
     {
       path: "/login",
       element: <Login />,
     },
     {
-      path: "/signup",
-      element: <Signup />,
+      path: "/register",
+      element: <Register />,
     },
   ]);
 
   return (
-    <>
-      <RouterProvider router={router} />,
+    <Suspense fallback="...is loading">
+      <RouterProvider router={router} />
       <ToastContainer
         position="bottom-center"
         autoClose={5000}
@@ -66,11 +104,10 @@ const Layout = () => {
         closeOnClick={false}
         rtl={false}
         pauseOnFocusLoss
-        draggable
-        pauseOnHover
+        draggablepauseOnHover
         theme="light"
       />
-    </>
+    </Suspense>
   );
 };
 

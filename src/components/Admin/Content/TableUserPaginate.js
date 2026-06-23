@@ -1,7 +1,9 @@
 import ReactPaginate from "react-paginate";
+import { useTranslation } from "react-i18next";
 
 const TableUserPaginate = (props) => {
   const { listUsers, pageCount, currentPage, setCurrentPage } = props;
+  const { t } = useTranslation();
 
   const handlePageClick = (event) => {
     setCurrentPage(event.selected + 1);
@@ -12,13 +14,21 @@ const TableUserPaginate = (props) => {
       <table className="table table-striped table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">ID</th>
-            <th scope="col">Username</th>
-            <th scope="col">Email</th>
-            <th scope="col">Role</th>
-            <th scope="col">Image</th>
-            <th scope="col">Action</th>
+            <th className="text-center" scope="col">
+              #
+            </th>
+            <th className="text-center" scope="col">
+              ID
+            </th>
+            <th scope="col">{t("user-mng.table.username")}</th>
+            <th scope="col">{t("user-mng.table.email")}</th>
+            <th scope="col">{t("user-mng.table.role")}</th>
+            <th className="text-center" scope="col">
+              {t("user-mng.table.image")}
+            </th>
+            <th className="text-center" scope="col">
+              {t("user-mng.table.action")}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -27,25 +37,41 @@ const TableUserPaginate = (props) => {
             listUsers.map((user, index) => {
               return (
                 <tr key={`table-users-${index}`}>
-                  <th scope="row">{index + 1}</th>
-                  <td>{user.id}</td>
+                  <th className="text-center" scope="row">
+                    {index + 1}
+                  </th>
+                  <td className="text-center">{user.id}</td>
                   <td>{user.username}</td>
                   <td>{user.email}</td>
                   <td>{user.role}</td>
-                  <td>{user.role}</td>
-                  <td>
-                    <button className="btn btn-info">View</button>
+                  <td className="text-center">
+                    {user.image ? (
+                      <img
+                        style={{ height: "100px" }}
+                        src={`data:image/jpeg;base64,${user.image}`}
+                      />
+                    ) : (
+                      <span>{t("user-mng.table.no-img")}</span>
+                    )}
+                  </td>
+                  <td
+                    className="text-center"
+                    style={{ width: "1%", whiteSpace: "nowrap" }}
+                  >
+                    <button className="btn btn-info">
+                      {t("user-mng.table.view")}
+                    </button>
                     <button
                       className="btn btn-secondary mx-3"
                       onClick={() => props.handleSelectUser(user)}
                     >
-                      Update
+                      {t("user-mng.table.update")}
                     </button>
                     <button
                       className="btn btn-danger"
                       onClick={() => props.handleDeleteUser(user)}
                     >
-                      Delete
+                      {t("user-mng.table.delete")}
                     </button>
                   </td>
                 </tr>
@@ -59,12 +85,12 @@ const TableUserPaginate = (props) => {
         </tbody>
       </table>
       <ReactPaginate
-        nextLabel="Next >"
+        nextLabel={t("user-mng.table.next")}
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         marginPagesDisplayed={2}
         pageCount={pageCount}
-        previousLabel="< Prev"
+        previousLabel={t("user-mng.table.prev")}
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"

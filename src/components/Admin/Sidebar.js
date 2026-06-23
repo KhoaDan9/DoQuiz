@@ -1,6 +1,6 @@
 // import "react-pro-sidebar/dist/css/style.css";
 import "react-pro-sidebar/dist/css/styles.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   ProSidebar,
@@ -12,17 +12,14 @@ import {
   SidebarContent,
 } from "react-pro-sidebar";
 
-import {
-  FaTachometerAlt,
-  FaGem,
-  FaList,
-  FaGithub,
-  FaRegLaughWink,
-  FaHeart,
-} from "react-icons/fa";
+import { FaTachometerAlt, FaGem, FaGithub } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = (props) => {
   const { collapsed, toggled, handleToggleSidebar } = props;
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+
   return (
     <div>
       <ProSidebar
@@ -36,34 +33,41 @@ const Sidebar = (props) => {
           <div
             style={{
               padding: "24px",
-              textTransform: "uppercase",
               fontWeight: "bold",
               fontSize: 14,
               letterSpacing: "1px",
               overflow: "hidden",
               textOverflow: "ellipsis",
               whiteSpace: "nowrap",
+              cursor: "pointer",
             }}
+            onClick={() => navigate("/")}
           >
-            Day la tieu de
+            DoQuiz
           </div>
         </SidebarHeader>
 
         <SidebarContent>
           <Menu iconShape="circle">
             <MenuItem icon={<FaTachometerAlt />}>
-              Dashboard
+              {t("sidebar.head-1")}
               <Link to="/admins" />
             </MenuItem>
           </Menu>
           <Menu iconShape="circle">
-            <SubMenu title="Components" icon={<FaGem />}>
+            <SubMenu title={t("sidebar.head-2")} icon={<FaGem />}>
               <MenuItem>
-                Quản lý user
+                {t("sidebar.item-21")}
                 <Link to="/admins/manage-users" />
               </MenuItem>
-              <MenuItem>Quản lý bài Quiz</MenuItem>
-              <MenuItem>Quản lý câu hỏi</MenuItem>
+              <MenuItem>
+                {t("sidebar.item-22")}
+                <Link to="/admins/manage-quizzes" />
+              </MenuItem>
+              <MenuItem>
+                {t("sidebar.item-23")}
+                <Link to="/admins/manage-questions" />
+              </MenuItem>
             </SubMenu>
           </Menu>
         </SidebarContent>

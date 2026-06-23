@@ -1,4 +1,21 @@
 .login-container {
+    .loader-icon{
+        font-size: 18px;
+        margin-bottom: 3px;
+        color: aqua;
+        animation: spin 1s infinite linear;
+        margin-right: 4px;
+    }
+
+    @keyframes spin {
+        from{
+            transform: scale(1) rotate(0deg);
+        }
+        to{
+            transform: scale(1) rotate(360deg);
+        }
+    }
+
     .header{
         display: flex;
         align-items: center;
@@ -6,6 +23,7 @@
         height: 45px;
         text-align: right;
         padding: 0 100px;
+        gap: 10px;
         
         button{
             margin-left: 5px;
@@ -14,10 +32,8 @@
             padding: 3px 15px;
             background-color: rgb(207, 207, 207);
 
-
             &:hover{
             background-color: white;
-                
             }
         }
     }
@@ -47,7 +63,16 @@
                 border-radius: 4px;
                 background-color: black;
                 color: white;
+
+                &:disabled{
+                    background-color: #cccccc;
+                    color: #666666;
+                    cursor: no-drop;
+                }
             }
+
+  
+
         }
 
         .pass-group{

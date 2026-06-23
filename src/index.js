@@ -2,11 +2,20 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import Layout from "./views/Layout";
 import { Provider } from "react-redux";
+import { store, persistor } from "./redux/store";
+import "nprogress/nprogress.css";
+import { PersistGate } from "redux-persist/integration/react";
+import "react-perfect-scrollbar/dist/css/styles.css";
+import i18n from "./components/utils/i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <Layout />,
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <Layout />
+    </PersistGate>
+  </Provider>,
 
   // </React.StrictMode>,
 );

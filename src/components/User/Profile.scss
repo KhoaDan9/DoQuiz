@@ -1,0 +1,88 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+
+    .profile-background{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 50vh;
+        background-image: linear-gradient(to right, #d4d9f5, #b09dff);
+    }
+    .profile-content{
+        z-index: 10;
+        width: 60%;
+        height: 500px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid gray;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .div-info{
+            img{
+                margin-top: -80px;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 2px solid gray;
+                object-fit: cover;
+                object-position: center;
+            }
+            .detail {
+                text-align: center;
+                margin-top: 50px;
+                font-size: 30px;
+            }
+        }
+
+        .div-btn{
+            margin-bottom: 50px;
+            gap: 10px;
+
+            .profile-btn{
+                padding: 15px 25px;
+                margin: 0 10px;
+                font-weight: 600;
+                background-image: linear-gradient(to right, #f62d53, #e26aa9);
+                border: 0;
+                border-radius: 30px;
+                cursor: pointer;    
+            }
+        }
+    }
+}
+
+.modal-profile{
+    .img-preview{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed gray;
+        border-radius: 5px;
+        height: 210px;
+        cursor: pointer;
+
+        img{
+            height: 200px;
+        }
+    }
+}
+
+.modal-change-password{
+    .pass-group{
+        position: relative;
+
+        .icons-eye{
+            position: absolute;
+            right: 25px;
+            bottom: 10px;
+            cursor: pointer;
+        }
+    }
+}
