@@ -80,7 +80,7 @@ const Sidebar = (props) => {
             }}
           >
             <a
-              href="https://github.com/azouaoui-med/react-pro-sidebar"
+              href="https://github.com/KhoaDan9/DoQuiz"
               target="_blank"
               className="sidebar-btn"
               rel="noopener noreferrer"
