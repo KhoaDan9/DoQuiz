@@ -22,7 +22,7 @@ const HomePage = (props) => {
               {t("homepage.login")}
             </button>
           ) : (
-            <button className="home-btn" onClick={() => navigate("/users")}>
+            <button className="home-btn" onClick={() => navigate("/quizzes")}>
               {t("homepage.do-quiz")}
             </button>
           )}

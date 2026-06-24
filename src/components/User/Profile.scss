@@ -90,3 +90,17 @@
         }
     }
 }
+
+@media (max-width: 992px){
+    .profile-content{
+        width: 80% !important;
+
+        .div-btn{
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+    }
+
+
+}
