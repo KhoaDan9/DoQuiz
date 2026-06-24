@@ -69,7 +69,6 @@ const Login = (props) => {
               onKeyDown={(e) => handleKeyDown(e)}
             />
           </div>
-          <span className="forgot-password">Forgot password?</span>
           <div className="btn-submit">
             <button onClick={() => handleLogin()} disabled={isLoading}>
               {isLoading && <ImSpinner10 className="loader-icon" />}
