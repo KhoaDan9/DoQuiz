@@ -224,7 +224,7 @@ const Questions = () => {
           value={selectedQuiz}
           onChange={setSelectedQuiz}
           options={listQuiz}
-          className="col-md-6"
+          className="col-9 col-lg-6"
         />
       </div>
 
@@ -237,7 +237,7 @@ const Questions = () => {
               <div key={question.id} className="q-main mb-4">
                 <div className="question-content">
                   <div className="q-detail">
-                    <div className="form-floating col-md-6">
+                    <div className="form-floating col-8 col-lg-6">
                       <input
                         type="text"
                         className="form-control"
@@ -312,7 +312,7 @@ const Questions = () => {
                             )
                           }
                         />
-                        <div className="answer-form form-floating col-md-6">
+                        <div className="answer-form form-floating col-9 col-lg-6">
                           <input
                             type="text"
                             className="form-control"
