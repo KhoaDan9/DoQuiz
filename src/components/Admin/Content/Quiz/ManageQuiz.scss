@@ -17,6 +17,10 @@
         }
 
     }
+
+    .card-manage-quiz{
+       display: none;
+    }
 }
 
 .modal-add-quiz {
@@ -52,6 +56,22 @@
 
 @media (max-width: 992px){
     .table-manage-quiz{
-        zoom: 0.2;
+        display: none;
     }
+
+    .card-manage-quiz{
+        display: flex !important;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .btn-card{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
 }

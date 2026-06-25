@@ -12,7 +12,63 @@
             }
         }
 
+        .table-res{
+            .table-manage-user{
+                display: table;
+            }
+        }
+
+        .card-res{
+            display: none;
+
+            .card-manage-user{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+
+                .div-img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 150px;
+                    border-bottom: 1px dashed gray;
+
+                    img{
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        border-radius: 5px;
+                        padding: 5px;
+                    }
+                }
+
+                .card-body{
+                    padding: 0px;
+                    .div-card{
+                        padding: 5px;
+                        .user-col-width{
+                            width: 80px;
+                        }
+                    }
+
+                    .btn-card{
+                        padding: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                
+                }
+            }
+        }
+        
     }
+
+   
 }
 
 .modal-add-user {
@@ -45,11 +101,25 @@
             max-height: 100%;
         }
     }
+
+    
 }
 
 
 @media (max-width: 992px){
-    .table-users-container{
-        zoom: 0.2;
+    .manage-user-container{
+        .users-content{
+            .table-res{
+                display: none;
+            }
+           
+            .card-res{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
     }
 }
