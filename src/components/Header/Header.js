@@ -36,48 +36,46 @@ const Header = () => {
           </NavLink>
         </Nav>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavLink className="nav-link" to="/">
-              {t("header.home")}
-            </NavLink>
-            <NavLink className="nav-link" to="/quizzes">
-              {t("header.quizzes")}
-            </NavLink>
-            <NavLink className="nav-link" to="/admins">
-              {t("header.admin")}
-            </NavLink>
-          </Nav>
-          <Nav>
-            {isAuthenticated === false ? (
-              <>
-                <button
-                  className="btn-login"
-                  onClick={() => navigate("/login")}
-                >
-                  {t("header.login")}
-                </button>
-                <button
-                  className="btn-register"
-                  onClick={() => navigate("/register")}
-                >
-                  {t("header.register")}
-                </button>
-              </>
-            ) : (
-              <NavDropdown title={t("header.setting")} id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={() => navigate("/profile")}>
-                  {t("header.profile")}
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => handleLogOut()}>
-                  {t("header.logout")}
-                </NavDropdown.Item>
-              </NavDropdown>
-            )}
-            <Language />
-          </Nav>
-        </Navbar.Collapse>
+        {isAuthenticated === false ? (
+          <>
+            <button className="btn-login" onClick={() => navigate("/login")}>
+              {t("header.login")}
+            </button>
+          </>
+        ) : (
+          <>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <NavLink className="nav-link" to="/">
+                  {t("header.home")}
+                </NavLink>
+                <NavLink className="nav-link" to="/quizzes">
+                  {t("header.quizzes")}
+                </NavLink>
+                <NavLink className="nav-link" to="/admins">
+                  {t("header.admin")}
+                </NavLink>
+              </Nav>
+              <Nav>
+                {isAuthenticated === true && (
+                  <NavDropdown
+                    title={t("header.setting")}
+                    id="basic-nav-dropdown"
+                  >
+                    <NavDropdown.Item onClick={() => navigate("/profile")}>
+                      {t("header.profile")}
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => handleLogOut()}>
+                      {t("header.logout")}
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                )}
+                <Language />
+              </Nav>
+            </Navbar.Collapse>
+          </>
+        )}
       </Container>
     </Navbar>
   );

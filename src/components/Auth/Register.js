@@ -49,7 +49,7 @@ const Register = (props) => {
         Have a account?<button onClick={() => navigate("/login")}>Login</button>
         <Language />
       </div>
-      <div className="col-4 mx-auto">
+      <div className="col-10 col-md-4 mx-auto">
         <div className="title">DoQuiz</div>
         <div className="welcome">Sign up</div>
         <div className="content-form">

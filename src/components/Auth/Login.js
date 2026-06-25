@@ -46,7 +46,7 @@ const Login = (props) => {
         <button onClick={() => navigate("/register")}>Sign up</button>
         <Language />
       </div>
-      <div className="col-4 mx-auto">
+      <div className="col-10 col-md-4 mx-auto">
         <div className="title">DoQuiz</div>
         <div className="welcome">Hello, who is this?</div>
         <div className="content-form">
