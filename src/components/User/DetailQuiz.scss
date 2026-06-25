@@ -141,6 +141,10 @@
         flex-direction: column;
     .left-content{
         width: 100%;
+        .title{
+            height: unset;
+            font-size: 24px;
+        }
     }
     .right-content{
         width: 100%;
