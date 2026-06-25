@@ -9,6 +9,7 @@ import ModalActionQuiz from "./ModalActionQuiz";
 import ModalDeleteQuiz from "./ModalDeleteQuiz";
 import AssignQuiz from "./AssignQuiz";
 import { useTranslation } from "react-i18next";
+import CardQuiz from "./CardQuiz";
 
 const ManageQuiz = (props) => {
   const { t } = useTranslation();
@@ -145,6 +146,13 @@ const ManageQuiz = (props) => {
         handleUpdateQuiz={handleUpdateQuiz}
         handleDeleteQuiz={handleDeleteQuiz}
       />
+
+      <CardQuiz
+        listQuiz={listQuiz}
+        handleUpdateQuiz={handleUpdateQuiz}
+        handleDeleteQuiz={handleDeleteQuiz}
+      />
+
       <ModalActionQuiz
         show={showModalUpdateQuiz}
         setShow={setShowModalUpdateQuiz}

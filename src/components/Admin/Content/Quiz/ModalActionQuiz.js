@@ -74,7 +74,7 @@ const ModalActionQuiz = (props) => {
           <form className="row ">
             <div className="col-md-8">
               <label htmlFor="inputName" className="form-label">
-                {t("quiz-mng.table.add.name")}
+                {t("quiz-mng.table.name")}
               </label>
               <input
                 type="text"
@@ -87,7 +87,7 @@ const ModalActionQuiz = (props) => {
 
             <div className="col-md-4">
               <label htmlFor="inputRole" className="form-label">
-                {t("quiz-mng.table.add.role")}
+                {t("quiz-mng.table.type")}
               </label>
               <select
                 className="form-select"

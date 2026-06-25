@@ -7,6 +7,7 @@ import ModalDeleteUser from "./ModalDeleteUser";
 import TableUserPaginate from "./TableUserPaginate";
 import "./ManageUser.scss";
 import { useTranslation } from "react-i18next";
+import CardUserPaginate from "./CardUserPaginate";
 
 const ManageUser = (props) => {
   const LIMIT_USER = 5;
@@ -71,12 +72,12 @@ const ManageUser = (props) => {
             {t("user-mng.btn-add")}
           </button>
         </div>
-        <div className="table-users-container">
-          {/* <TableUser
+        {/* <TableUser
             listUsers={listUsers}
             handleSelectUser={handleSelectUser}
             handleDeleteUser={handleDeleteUser}
           /> */}
+        <div className="table-res">
           <TableUserPaginate
             listUsers={listUsers}
             handleSelectUser={handleSelectUser}
@@ -86,6 +87,18 @@ const ManageUser = (props) => {
             currentPage={currentPage}
           />
         </div>
+
+        <div className="card-res">
+          <CardUserPaginate
+            listUsers={listUsers}
+            handleSelectUser={handleSelectUser}
+            handleDeleteUser={handleDeleteUser}
+            setCurrentPage={setCurrentPage}
+            pageCount={pageCount}
+            currentPage={currentPage}
+          />
+        </div>
+
         <ModalActionUser
           show={showModalCreateUser}
           setShow={setShowModalCreateUser}

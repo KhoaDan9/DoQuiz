@@ -11,7 +11,7 @@ const TableUserPaginate = (props) => {
 
   return (
     <>
-      <table className="table table-striped table-hover">
+      <table className="table table-striped table-hover table-manage-user">
         <thead>
           <tr>
             <th className="text-center" scope="col">
