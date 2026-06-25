@@ -48,11 +48,15 @@ const ManageQuiz = (props) => {
   const handleDeleteQuiz = (quiz) => {
     setShowModalDeleteQuiz(true);
     setSelectedQuiz(quiz);
+
+    fetchListQuiz();
   };
 
   const handleUpdateQuiz = (quiz) => {
     setShowModalUpdateQuiz(true);
     setSelectedQuiz(quiz);
+
+    fetchListQuiz();
   };
 
   const handleSubmitQuiz = async (e) => {
@@ -68,6 +72,7 @@ const ManageQuiz = (props) => {
       setDescription("");
       setImage(null);
       fileRef.current.value = "";
+      await fetchListQuiz();
     }
 
     if (res && res.EC !== 0) {
