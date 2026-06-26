@@ -94,6 +94,10 @@
     }
 }
 
+.action {
+    min-width: 200px;
+}
+
 
 video {
     position: fixed;
@@ -101,6 +105,8 @@ video {
 
     width: 100vw;
 }
+
+
 
 @media (max-width: 992px){
     .homepage-container{
