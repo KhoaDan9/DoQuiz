@@ -20,7 +20,7 @@ const TableQuiz = (props) => {
           <th className="text-center" scope="col">
             {t("quiz-mng.table.image")}
           </th>
-          <th className="text-center" scope="col">
+          <th className="text-center " scope="col">
             {t("quiz-mng.table.action")}
           </th>
         </tr>
@@ -41,9 +41,9 @@ const TableQuiz = (props) => {
                     src={`data:image/jpeg;base64,${item.image}`}
                   />
                 </td>
-                <td className="text-center">
+                <td className="text-center action">
                   <button
-                    className="btn btn-secondary mx-3"
+                    className="btn btn-secondary mx-2"
                     onClick={() => props.handleUpdateQuiz(item)}
                   >
                     {t("quiz-mng.table.update")}
